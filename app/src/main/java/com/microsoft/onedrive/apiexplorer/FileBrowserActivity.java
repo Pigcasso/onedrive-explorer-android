@@ -32,11 +32,11 @@ public class FileBrowserActivity extends AppCompatActivity implements ItemFragme
 
         setContentView(R.layout.activity_file_browser);
 
-        Fragment fragment = getFragmentManager().findFragmentById(R.id.frameContent);
+        Fragment fragment = getFragmentManager().findFragmentById(R.id.fragment);
         if (fragment == null) {
             fragment = ItemFragment.newInstance(getIntent().getStringExtra(ITEM_ID));
             getFragmentManager().beginTransaction()
-                    .add(R.id.frameContent, fragment)
+                    .add(R.id.fragment, fragment)
                     .commit();
         }
     }
@@ -45,7 +45,7 @@ public class FileBrowserActivity extends AppCompatActivity implements ItemFragme
     public void onFragmentInteraction(DisplayItem item) {
         getFragmentManager()
                 .beginTransaction()
-                .replace(R.id.frameContent, ItemFragment.newInstance(item.getId()))
+                .replace(R.id.fragment, ItemFragment.newInstance(item.getId()))
                 .addToBackStack(null)
                 .commit();
     }
