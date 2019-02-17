@@ -87,10 +87,11 @@ public class PlaceholderFragment extends Fragment {
      * Navigate to the root object in the onedrive
      */
     private void navigateToRoot() {
-        getFragmentManager()
+        /*getFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fragment, ItemFragment.newInstance("root"))
                 .addToBackStack(null)
-                .commit();
+                .commit();*/
+        FileBrowserActivity.start(getActivity(), "root");
     }
 }
