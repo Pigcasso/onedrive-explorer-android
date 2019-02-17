@@ -22,15 +22,15 @@
 
 package com.microsoft.onedrive.apiexplorer;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
 /**
  * OneDrive Api Explorer
  */
-public class ApiExplorer extends Activity implements ItemFragment.OnFragmentInteractionListener {
+public class ApiExplorer extends AppCompatActivity implements ItemFragment.OnFragmentInteractionListener {
 
     /**
      * OnCreate
